@@ -167,7 +167,7 @@ a:hover {
 }
 
 a.dark-mode h3 {
-	color: #fff;
+   color: #fff;
 }
 body.dark-mode h3 {
   color: #fff;  /* Biały kolor tekstu */
