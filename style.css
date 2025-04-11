@@ -1,0 +1,174 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Kumbh Sans', sans-serif;
+  background-color: #f5f5f5;
+  color: #222;
+  line-height: 1.6;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body.dark-mode {
+  background-color: #111;
+  color: #fff;
+}
+
+.container {
+  width: 90%;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 2rem 0;
+}
+
+header {
+  background-color: #111;
+  color: #fff;
+  padding: 4rem 0;
+  text-align: center;
+}
+
+.main-title {
+  font-size: 3rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.main-title {
+  font-size: 3rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s, transform 0.3s;
+}
+
+nav a:hover {
+  color: #00bcd4;
+  transform: scale(1.1);
+}
+
+h2 {
+  font-size: 2rem;
+  margin: 2rem 0 1rem;
+  border-bottom: 2px solid #444;
+  padding-bottom: 0.5rem;
+}
+
+.project-subsection {
+  margin-bottom: 3rem;
+}
+
+.project-subsection h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.project-subsection h3 {
+  transition: color 0.3s ease;
+}
+
+.project-subsection h3:hover {
+  color: #00bcd4;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+}
+
+.gallery img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.gallery img:hover {
+  transform: scale(1.05);
+  opacity: 0.9;
+}
+
+.gallery img.lazy-loaded {
+  opacity: 1;
+}
+
+.contact-info {
+  list-style: none;
+  margin-top: 1rem;
+}
+
+.contact-info li {
+  margin-bottom: 0.5rem;
+}
+
+footer {
+  text-align: center;
+  padding: 2rem 0;
+  color: #888;
+  background-color: #eee;
+  margin-top: 4rem;
+}
+
+footer.dark-mode {
+  background-color: #222;
+  color: #fff;
+}
+
+/* Dark mode toggle button */
+.dark-mode-toggle {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  background-color: #00bcd4;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.dark-mode-toggle:hover {
+  background-color: #008c9e;
+}
+
+.project-subsection p {
+  text-align: center; /* Wyśrodkowanie tekstu w paragrafie */
+}
+
+a {
+  color: #333;
+  text-decoration: none; /* Usuwanie podkreślenia */
+  text-align: center;
+}
+
+a:hover {
+  color: #00bcd4;
+}
+
+a.dark-mode h3 {
+	color: #fff;
+}
+body.dark-mode h3 {
+  color: #fff;  /* Biały kolor tekstu */
+}
