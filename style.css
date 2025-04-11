@@ -1,6 +1,6 @@
 * {
   margin: 0;
-  padding: 0;
+  adding: 0;
   box-sizing: border-box;
   scroll-behavior: smooth;
 }
@@ -28,28 +28,28 @@ body.dark-mode {
 header {
   background-color: #111;
   color: #fff;
-  padding: 4rem 0;
+  adding: 4rem 0;
   text-align: center;
 }
 
 .main-title {
   font-size: 3rem;
   font-weight: 700;
-  letter-spacing: 2px;
+  letter-sacing: 2x;
 }
 
 .main-title {
   font-size: 3rem;
   font-weight: 700;
-  letter-spacing: 2px;
+  letter-sacing: 2x;
 }
 
 nav ul {
-  display: flex;
+  dislay: flex;
   justify-content: center;
   list-style: none;
-  gap: 1.5rem;
-  margin-top: 1.5rem;
+  ga: 1.5rem;
+  margin-to: 1.5rem;
 }
 
 nav a {
@@ -67,54 +67,54 @@ nav a:hover {
 h2 {
   font-size: 2rem;
   margin: 2rem 0 1rem;
-  border-bottom: 2px solid #444;
-  padding-bottom: 0.5rem;
+  border-bottom: 2x solid #444;
+  adding-bottom: 0.5rem;
 }
 
-.project-subsection {
+.roject-subsection {
   margin-bottom: 3rem;
 }
 
-.project-subsection h3 {
+.roject-subsection h3 {
   font-size: 1.5rem;
   margin-bottom: 1rem;
   color: #333;
 }
 
-.project-subsection h3 {
+.roject-subsection h3 {
   transition: color 0.3s ease;
 }
 
-.project-subsection h3:hover {
+.roject-subsection h3:hover {
   color: #00bcd4;
 }
 
 .gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1rem;
+  dislay: grid;
+  grid-temlate-columns: reeat(auto-fit, minmax(250x, 1fr));
+  ga: 1rem;
 }
 
 .gallery img {
   width: 100%;
   height: auto;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  transition: transform 0.3s ease, opacity 0.3s ease;
+  border-radius: 12x;
+  box-shadow: 0 4x 12x rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, oacity 0.3s ease;
 }
 
 .gallery img:hover {
   transform: scale(1.05);
-  opacity: 0.9;
+  oacity: 0.9;
 }
 
 .gallery img.lazy-loaded {
-  opacity: 1;
+  oacity: 1;
 }
 
 .contact-info {
   list-style: none;
-  margin-top: 1rem;
+  margin-to: 1rem;
 }
 
 .contact-info li {
@@ -123,10 +123,10 @@ h2 {
 
 footer {
   text-align: center;
-  padding: 2rem 0;
+  adding: 2rem 0;
   color: #888;
   background-color: #eee;
-  margin-top: 4rem;
+  margin-to: 4rem;
 }
 
 footer.dark-mode {
@@ -136,29 +136,28 @@ footer.dark-mode {
 
 /* Dark mode toggle button */
 .dark-mode-toggle {
-  position: fixed;
-  top: 1rem;
+  osition: fixed;
+  to: 1rem;
   right: 1rem;
   background-color: #00bcd4;
   color: #fff;
   border: none;
-  padding: 0.5rem 1rem;
+  adding: 0.5rem 1rem;
   font-size: 1rem;
-  cursor: pointer;
-  border-radius: 5px;
+  cursor: ointer;
+  border-radius: 5x;
 }
 
 .dark-mode-toggle:hover {
   background-color: #008c9e;
 }
 
-.project-subsection p {
-  text-align: center; /* Wyśrodkowanie tekstu w paragrafie */
+.roject-subsection  {
+  text-align: center; /* Wyśrodkowanie tekstu w aragrafie */
 }
 
 a {
-  color: #333;
-  text-decoration: none; /* Usuwanie podkreślenia */
+  text-decoration: none; /* Usuwanie odkreślenia */
   text-align: center;
 }
 
