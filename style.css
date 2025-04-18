@@ -1,3 +1,313 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Kumbh Sans', sans-serif;
+  background-color: #f5f5f5;
+  color: #222;
+  line-height: 1.6;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body.dark-mode {
+  background-color: #111;
+  color: #fff;
+}
+
+.container {
+  width: 90%;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 2rem 0;
+}
+
+header {
+  background-color: #111;
+  color: #fff;
+  padding: 4rem 0;
+  text-align: center;
+}
+
+.main-title {
+  font-family: 'Clash Display', sans-serif;
+  font-weight: 700; /* Bold */
+  font-size: 4rem
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s, transform 0.3s;
+}
+
+nav a:hover {
+  color: #00bcd4;
+  transform: scale(1.1);
+}
+
+h2 {
+  font-size: 2rem;
+  margin: 2rem 0 1rem;
+  border-bottom: 2px solid #444;
+  padding-bottom: 0.5rem;
+}
+
+.project-subsection {
+  margin-bottom: 3rem;
+}
+
+.project-subsection h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.project-subsection h3 {
+  transition: color 0.3s ease;
+}
+
+.project-subsection h3:hover {
+  color: #00bcd4;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+}
+
+.gallery img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  transform-origin: center; /* Skalowanie zaczyna się od środka */
+  isolation: isolate; /* Zapobiega mieszaniu warstw */
+}
+
+.gallery img:hover {
+  transform: scale(1.05);
+  opacity: 0.9;
+}
+
+.gallery img.lazy-loaded {
+  opacity: 1;
+}
+
+.contact-info {
+  list-style: none;
+  margin-top: 1rem;
+}
+
+.contact-info li {
+  margin-bottom: 0.5rem;
+}
+
+footer {
+  text-align: center;
+  padding: 2rem 0;
+  color: #888;
+  background-color: #eee;
+  margin-top: 4rem;
+}
+
+footer.dark-mode {
+  background-color: #222;
+  color: #fff;
+}
+
+/* Dark mode toggle button */
+.dark-mode-toggle {
+  z-index: 1000; /* Upewnij się, że jest na wierzchu */
+  box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+  transition: all 0.3s ease;
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  width: 3rem; /* równa szerokość */
+  height: 3rem; /* równa wysokość */
+  background-color: #00bcd4;
+  color: #fff;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  border-radius: 50%; /* okrągły kształt */
+  display: flex;
+  align-items: center;
+  justify-content: center; /* wyśrodkowanie ikony/tekstu */
+}
+
+.dark-mode-toggle:hover {
+  background-color: #008c9e;
+  transform: scale(1.1);
+}
+
+
+.project-subsection p {
+  text-align: center; /* Wyśrodkowanie tekstu w paragrafie */
+}
+
+a {
+  color: #333;
+  text-decoration: none; /* Usuwanie podkreślenia */
+  text-align: center;
+}
+
+a:hover {
+  color: #00bcd4;
+}
+
+a.dark-mode h3 {
+	color: #fff;
+}
+body.dark-mode h3 {
+  color: #fff;  /* Biały kolor tekstu */
+}
+
+.image-container {
+  position: relative;
+  display: inline-block;
+    overflow: visible; /* Nadpisuje domyślny overflow */
+  transform: translateZ(0); /* Optymalizacja dla animacji */
+}
+
+.image-container .caption {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  padding: 0.3rem 0.6rem;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.image-container:hover .caption {
+  opacity: 1;
+}
+
+.material-symbols-outlined {
+  font-size: 24px;
+  vertical-align: middle;
+}
+
+h2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+.toggle-icon {
+  font-size: 28px;
+  transition: transform 0.3s ease;
+}
+
+.second-title {
+  font-family: 'Clash Display', sans-serif;
+  font-weight: 400; /* Regular */
+}
+
+@keyframes fadeSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.main-title, .second-title {
+  opacity: 0;
+  animation: fadeSlideUp 1s ease forwards;
+}
+
+.second-title {
+  animation-delay: 0.3s;
+}
+
+body.dark-mode a {
+  color: #00bcd4; /* Jasny kolor pasujący do dark mode */
+}
+
+body.dark-mode a:hover {
+  color: #66e0f0; /* Jaśniejszy przy najechaniu */
+}
+
+.section-content {
+  overflow: visible;
+  transition: 
+    max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+    opacity 0.3s ease 0.1s,
+    padding 0.3s ease;
+  max-height: 5000px;
+  opacity: 1;
+  padding: 1rem 0;
+  will-change: max-height, opacity; /* Optymalizacja animacji */
+  contain: none;
+}
+
+.section-content.collapsed {
+  max-height: 0;
+  opacity: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+  overflow: visible;
+  transition: 
+    max-height 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+    opacity 0.2s ease,
+    padding 0.3s ease;
+}
+
+/* Dodatkowe ulepszenia dla nagłówków */
+.collapsible-section h2 {
+  transition: background-color 0.3s ease;
+  padding: 0.8rem;
+  border-radius: 8px;
+}
+
+.collapsible-section h2:hover {
+  background-color: rgba(0, 188, 212, 0.1);
+}
+
+@media (max-width: 768px) {
+  .main-title {
+    font-size: 2.5rem;
+  }
+  
+  .second-title {
+    font-size: 1.8rem;
+  }
+  
+  nav ul {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .gallery {
+    grid-template-columns: 1fr;
+  }
+}
 
 /* Styl dla podpisu w lightboxie */
 .lightbox-caption {
