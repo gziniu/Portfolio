@@ -255,7 +255,7 @@ body.dark-mode a:hover {
 }
 
 .section-content {
-  overflow: hidden;
+  overflow: visible;
   transition: 
     max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1),
     opacity 0.3s ease 0.1s,
@@ -264,7 +264,7 @@ body.dark-mode a:hover {
   opacity: 1;
   padding: 1rem 0;
   will-change: max-height, opacity; /* Optymalizacja animacji */
-  contain: content;
+  contain: none;
 }
 
 .section-content.collapsed {
@@ -272,7 +272,7 @@ body.dark-mode a:hover {
   opacity: 0;
   padding-top: 0;
   padding-bottom: 0;
-  overflow: hidden;
+  overflow: visible;
   transition: 
     max-height 0.3s cubic-bezier(0.4, 0, 0.2, 1),
     opacity 0.2s ease,
