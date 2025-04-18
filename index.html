@@ -206,5 +206,73 @@
   });
 </script>
 
+	<script src="https://cdn.jsdelivr.net/npm/basiclightbox@5.0.4/dist/basicLightbox.min.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  // Znajdź wszystkie obrazki w kontenerach galerii
+  const images = document.querySelectorAll('.image-container img');
+  
+  images.forEach(img => {
+    // Zmień kursor na "zoom-in" dla lepszego UX
+    img.style.cursor = 'zoom-in';
+    
+    // Obsługa kliknięcia
+    img.addEventListener('click', function() {
+      // Pobierz podpis z elementu .caption w tym samym kontenerze
+      const container = this.closest('.image-container');
+      const caption = container.querySelector('.caption')?.textContent || this.alt;
+      
+      // Stwórz lightbox z dodatkowymi opcjami
+      const instance = basicLightbox.create(`
+        <div class="lightbox-content">
+          <img 
+            src="${this.src}" 
+            alt="${this.alt}" 
+            style="
+              max-width: 90vw; 
+              max-height: 70vh;
+              border-radius: 12px;
+              box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+              display: block;
+              margin: 0 auto;
+          ">
+          ${caption ? `
+            <p class="lightbox-caption" style="
+              margin-top: 15px;
+              padding: 10px;
+              background: ${document.body.classList.contains('dark-mode') ? '#333' : '#f5f5f5'};
+              color: ${document.body.classList.contains('dark-mode') ? '#fff' : '#333'};
+              border-radius: 8px;
+              text-align: center;
+              font-family: 'Kumbh Sans', sans-serif;
+            ">
+              ${caption}
+            </p>
+          ` : ''}
+        </div>
+      `, {
+        className: 'custom-lightbox', // Klasa dla dodatkowego stylowania
+        onShow: () => {
+          document.body.style.overflow = 'hidden'; // Zablokuj przewijanie strony
+          document.body.classList.add('lightbox-open'); // Dodaj klasę helper
+        },
+        onClose: () => {
+          document.body.style.overflow = ''; // Odblokuj przewijanie
+          document.body.classList.remove('lightbox-open');
+        }
+      });
+      
+      instance.show();
+    });
+  });
+  
+  // Obsługa klawisza ESC (działa domyślnie w BasicLightbox)
+});
+</script>
+
+</body>
+</html>
+
+
 </body>
 </html>
