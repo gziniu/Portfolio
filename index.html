@@ -6,9 +6,17 @@
   <title>Szymon Banachowicz – Portfolio</title>
   <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+  <link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=clash-display@400,700&display=swap">
+  <link rel="icon" href="favicon.png" type="image/png" />
+
+
 </head>
 <body>
-  <button class="dark-mode-toggle" onclick="toggleDarkMode()">🌙</button>
+<button class="dark-mode-toggle" onclick="toggleDarkMode()" aria-label="Toggle dark mode" title="Zmień tryb jasny/ciemny">
+  <span class="material-symbols-outlined">dark_mode</span>
+</button>
+
   <header>
     <div class="container">
       <h1 class="main-title">Portfolio</h1>
@@ -16,8 +24,8 @@
       <nav>
         <ul>
           <li><a href="#about">O mnie</a></li>
-          <li><a href="#printed-projects">Projekty Drukowane</a></li>
-          <li><a href="#digital-projects">Projekty Wyświetlane</a></li>
+          <li><a href="#printed-projects">Grafika użytkowa</a></li>
+          <li><a href="#digital-projects">Projekty Cyfrowe</a></li>
           <li><a href="#contact">Kontakt</a></li>
         </ul>
       </nav>
@@ -25,80 +33,155 @@
   </header>
 
   <main class="container">
-    <section id="about">
-      <h2>🧑 O mnie</h2>
-      <p>Cześć! Nazywam się <b><i>Szymon Banachowicz</i></b>, mam 17 lat i jestem pasjonatem grafiki komputerowej. Zaczynałem swoją przygodę z grafiką jeszcze przed szkołą średnią, eksperymentując z różnymi programami i narzędziami. Obecnie uczę się w Zespole Szkół Technicznych w Ostrowie Wielkopolskim na kierunku grafika komputerowa i poligrafia cyfrowa. Z czasem odkryłem, jak bardzo wciąga mnie tworzenie wizualnych projektów. Choć wciąż się uczę, grafika stała się moją pasją, którą chcę rozwijać. W projektach stawiam na prostotę i nowoczesność, a moje najlepsze prace odzwierciedlają te wartości.</p>
-    </section>
+	<section id="about" class="collapsible-section">
+  <h2>
+    🧑 O mnie
+    <span class="material-symbols-outlined toggle-icon">keyboard_arrow_up</span>
+  </h2>
+  <div class="section-content">
+    <p>Cześć! Nazywam się <b><i>Szymon Banachowicz</i></b>, mam 17 lat i jestem pasjonatem grafiki komputerowej. Zaczynałem swoją przygodę z grafiką jeszcze przed szkołą średnią, eksperymentując z różnymi programami i narzędziami. Obecnie uczę się w Zespole Szkół Technicznych w Ostrowie Wielkopolskim na kierunku grafika komputerowa i poligrafia cyfrowa. Z czasem odkryłem, jak bardzo wciąga mnie tworzenie wizualnych projektów. Choć wciąż się uczę, grafika stała się moją pasją, którą chcę rozwijać. W projektach stawiam na prostotę i nowoczesność, a moje najlepsze prace odzwierciedlają te wartości.</p>
+  </div>
+</section>
 
-    <section id="printed-projects">
-      <h2>🖼️ Projekty Drukowane</h2>
-      <div class="project-subsection">
-	          <h3>Plakaty</h3>
-        <div class="gallery">
+<section id="printed-projects" class="collapsible-section">
+  <h2>🖼️ Grafika użytkowa
+    <span class="material-symbols-outlined toggle-icon">keyboard_arrow_up</span>
+  </h2>
+  <div class="section-content">
+    <div class="project-subsection">
+      <h3>Plakaty</h3>
+      <div class="gallery">
+        <div class="image-container">
           <img src="img/Plakaty/plakat1.png" alt="Plakat 1" class="lazy-loaded">
+          <span class="caption">Plakat - Ekologia</span>
+        </div>
+        <div class="image-container">
           <img src="img/Plakaty/plakat2.png" alt="Plakat 2" class="lazy-loaded">
-		  <img src="img/Plakaty/plakat3.png" alt="Plakat 3" class="lazy-loaded">
-		  <img src="img/Plakaty/plakat4.png" alt="Plakat 4" class="lazy-loaded">
-		  <img src="img/Plakaty/plakat5.png" alt="Plakat 5" class="lazy-loaded">
-		  <img src="img/Plakaty/plakat6.png" alt="Plakat 6" class="lazy-loaded">
+          <span class="caption">Plakat - Typografia</span>
+        </div>
+        <div class="image-container">
+          <img src="img/Plakaty/plakat3.png" alt="Plakat 3" class="lazy-loaded">
+          <span class="caption">Plakat - Matematyka</span>
+        </div>
+        <div class="image-container">
+          <img src="img/Plakaty/plakat4.png" alt="Plakat 4" class="lazy-loaded">
+          <span class="caption">Plakat Filmowy</span>
+        </div>
+        <div class="image-container">
+          <img src="img/Plakaty/plakat5.png" alt="Plakat 5" class="lazy-loaded">
+          <span class="caption">Plakat - Wakacyjny</span>
         </div>
       </div>
-	   <div class="project-subsection">
-        <h3>Logo</h3>
-        <div class="gallery">
+    </div>
+
+    <div class="project-subsection">
+      <h3>Logo</h3>
+      <div class="gallery">
+        <div class="image-container">
           <img src="img/logo/logo1.png" alt="Logo 1" class="lazy-loaded">
-        </div>
-		<br>
-		<p><a href="docs/Ksiega_znaku_AW.pdf" target="_blank">Zobacz księgę znaku</a></p>
-      </div>
-      <div class="project-subsection">
-        <h3>Ulotki</h3>
-        <div class="gallery">
-          <img src="img/ulotki/ulotka1.jpg" alt="Ulotka 1" class="lazy-loaded">
-          <img src="img/ulotki/ulotka2.jpg" alt="Ulotka 2" class="lazy-loaded">
+          <span class="caption">Logo - Active Way</span>
         </div>
       </div>
-	        <div class="project-subsection">
-        <h3>Inne</h3>
-        <div class="gallery">
-          <img src="img/inned/inne1.jpg" alt=" 1" class="lazy-loaded">
-          <img src="img/inned/inne2.jpg" alt=" 2" class="lazy-loaded">
-        </div>
-      </div>
-    </section>
+      <br>
+      <p><a href="docs/Ksiega_znaku_AW.pdf" target="_blank">Zobacz księgę znaku</a></p>
+    </div>
 
-     <section id="digital-projects">
-      <h2>💻 Projekty Wyświetlane</h2>
-      <div class="project-subsection">
-        <h3>Projekty stron</h3>
-        <div class="gallery">
-          <img src="img/strony/projekt1.png" alt="Projekt strony 1">
-          <img src="img/strony/projekt2.png" alt="Projekt strony 2">
+    <div class="project-subsection">
+      <h3>Ulotki</h3>
+      <div class="gallery">
+        <div class="image-container">
+          <img src="img/ulotki/ulotka1.png" alt="Ulotka 1" class="lazy-loaded">
+          <span class="caption">Ulotka - awers</span>
+        </div>
+        <div class="image-container">
+          <img src="img/ulotki/ulotka2.png" alt="Ulotka 2" class="lazy-loaded">
+          <span class="caption">Ulotka - rewers</span>
         </div>
       </div>
-      <div class="project-subsection">
-        <h3>Projekty aplikacji</h3>
-        <div class="gallery">
-          <img src="img/aplikacje/aplikacja1.jpg" alt="Projekt aplikacji 1">
-        </div>
-      </div>
-      <div class="project-subsection">
-        <h3>Inne</h3>
-        <div class="gallery">
-          <img src="img/inne/inne1.jpg" alt="Mockup 1">
-        </div>
-      </div>
-    </section>
+    </div>
 
-    <section id="contact">
-      <h2>📩 Kontakt</h2>
-      <p>Masz pytania lub chcesz współpracować? Napisz do mnie:</p>
-      <ul class="contact-info">
-        <li>Email: szymonbanachowicz@gmail.com</li>
-        <li>Instagram: @_gziniu</li>
-		<li>Telefon: +48 789 044 766</li>
-      </ul>
-    </section>
+    <div class="project-subsection">
+      <h3>Inne</h3>
+      <div class="gallery">
+	  <div class="image-container">
+        <img src="img/inned/inne1.png" alt="Inne 1" class="lazy-loaded">
+		     <span class="caption">Broszura - Irena Sendlerowa</span>
+		</div>
+		<div class="image-container">
+        <img src="img/inned/inne2.png" alt="Inne 2" class="lazy-loaded">
+			<span class="caption">Etykieta</span>
+		</div>
+      </div>
+	  <br>
+	  	<p><a href="docs/Broszura_Irena_Sendlerowa.pdf" target="_blank">Zobacz broszurę</a></p>
+    </div>
+  </div>
+</section>
+
+<section id="digital-projects" class="collapsible-section">
+  <h2>💻 Projekty Cyfrowe
+    <span class="material-symbols-outlined toggle-icon">keyboard_arrow_up</span>
+  </h2>
+  <div class="section-content">
+    <div class="project-subsection">
+      <h3>Projekty stron</h3>
+      <div class="gallery">
+	  <div class="image-container">
+        <img src="img/strony/projekt1.png" alt="Projekt strony 1" class="lazy-loaded">
+		<span class="caption">VARNews</span>
+	 </div>
+      </div>
+    </div>
+    <div class="project-subsection">
+      <h3>Projekty aplikacji</h3>
+      <div class="gallery">
+	   <div class="image-container">
+        <img src="img/aplikacje/aplikacja1.png" alt="Projekt aplikacji 1" class="lazy-loaded">
+		<span class="caption">OrionAI - Ekran ładowania</span>
+		</div>
+	   <div class="image-container">
+        <img src="img/aplikacje/aplikacja2.png" alt="Projekt aplikacji 2" class="lazy-loaded">
+		<span class="caption">OrionAI - Strona 1</span>
+		</div>
+	   <div class="image-container">
+        <img src="img/aplikacje/aplikacja3.png" alt="Projekt aplikacji 3" class="lazy-loaded">
+		<span class="caption">OrionAI - Strona 3</span>
+		</div>
+	   <div class="image-container">
+        <img src="img/aplikacje/aplikacja4.png" alt="Projekt aplikacji 4" class="lazy-loaded">
+		<span class="caption">OrionAI - Strona 4</span>
+		</div>
+      </div>
+    </div>
+    <div class="project-subsection">
+      <h3>Inne</h3>
+      <div class="gallery">
+	   <div class="image-container">
+        <img src="img/inne/inne1.png" alt="Inne 1" class="lazy-loaded">
+		<span class="caption">Kolaż</span>
+		</div>
+			   <div class="image-container">
+        <img src="img/inne/inne2.png" alt="Inne 2" class="lazy-loaded">
+		<span class="caption">Okładka Playlisty</span>
+		</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="collapsible-section">
+  <h2>📩 Kontakt
+    <span class="material-symbols-outlined toggle-icon">keyboard_arrow_up</span>
+  </h2>
+  <div class="section-content">
+    <p>Masz pytania lub chcesz współpracować? Napisz do mnie:</p>
+    <ul class="contact-info">
+      <li>Email: szymonbanachowicz08@gmail.com</li>
+      <li>Instagram: @_gziniu</li>
+      <li>Telefon: +48 789 044 766</li>
+    </ul>
+  </div>
+</section>
   </main>
 
   <footer>
@@ -111,5 +194,17 @@
       document.querySelector('footer').classList.toggle('dark-mode');
     }
   </script>
+  <script>
+  document.querySelectorAll('.collapsible-section h2').forEach(header => {
+    header.addEventListener('click', () => {
+      const section = header.parentElement;
+      const content = section.querySelector('.section-content');
+      const icon = header.querySelector('.toggle-icon');
+      content.classList.toggle('collapsed');
+      icon.textContent = content.classList.contains('collapsed') ? 'keyboard_arrow_down' : 'keyboard_arrow_up';
+    });
+  });
+</script>
+
 </body>
 </html>
